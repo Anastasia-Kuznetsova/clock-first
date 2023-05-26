@@ -1,0 +1,142 @@
+<DOCRTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<title>Прикольные часы</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="style.css" /> 		
+		
+	</head>
+	
+ <style>
+ 
+	*{
+    margin: 0;
+    box-sizing: border-box;
+	}
+
+	body{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		min-height: 100vh;
+		background: url(forestback.jpg);
+	}
+
+	.clock{
+		width: 350px;
+		height: 350px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: url(facesclocks.jpg);		
+		radial-gradient(circle, rgb(37, 73, 90) 0%, rgb(25, 48, 60) 11%, rgba(9,25,33,1) 38%);
+		background-size: cover;
+		border-radius: 50%;
+		box-shadow: 0 -15px 15px rgba(134, 134, 134, 0.35);
+	}
+
+	.clock:before{
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		background-color: #004524;
+		border-radius: 50%;
+		z-index: 999;
+	}
+
+	.clock .hour,
+	.clock .min,
+	.clock .sec{
+		position: absolute;
+	}
+
+	.clock .hour, .hr{
+		width: 160px;
+		height: 160px;
+	}
+	.clock .min, .mn{
+		width: 190px;
+		height: 190px;
+	}
+	.clock .sec, .sc{
+		width: 230px;
+		height: 230px;
+	}
+
+	.hr, .mn, .sc{
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		border-radius: 100%;
+	}
+
+	.hr:before{
+		content: '';
+		position: absolute;
+		width: 8px;
+		height: 80px;
+		background-color: #004524;
+		z-index: 10;
+		border-radius: 6px 6px 0 0;
+	}
+	.mn:before{
+		content: '';
+		position: absolute;
+		width: 4px;
+		height: 90px;
+		background-color: #fff;
+		z-index: 11;
+		border-radius: 6px 6px 0 0;
+	}
+	.sc:before{
+		content: '';
+		position: absolute;
+		width: 2px;
+		height: 150px;
+		background-color: #fff;
+		z-index: 12;
+		border-radius: 6px 6px 0 0;
+	}
+	
+	input{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+	}
+	
+	img{
+		width: 300px;
+		height: 300px;
+	}
+	
+	.color {
+		color: white;		
+		text-shadow: 1px 0 1px #000, 
+		0 1px 1px #000, 
+		-1px 0 1px #000, 
+		0 -1px 1px #000;
+	}
+	
+ </style>
+
+	<body>	
+		<div id = 'clock' class="clock">
+			<div class="hour">
+				<div class="hr" id="hr"></div>
+			</div>
+			<div class="min">
+				<div class="mn" id="mn"></div>
+			</div>
+			<div class="sec">
+				<div class="sc" id="sc"></div>
+			</div>
+		</div>
+		<h1 class="color" style="position:absolute;top: 10%">прелестный мир природы</h1>
+		<input type="image" src="babochka.png" alt="Кнопка «input»">
+		<img id="pic1" src="frog2.png" style="position:absolute;left:100px;right:100px; top: 50%" alt="">
+		<img id="pic2" src="frog.png" style="position:absolute;right:100px;right:100px; top: 50%" alt="">
+		<script type = "text/javascript" src = "clock.js" ></script>
+	</body>
+</html>
